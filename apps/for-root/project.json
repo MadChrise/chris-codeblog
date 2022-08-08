@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/for-root",
         "index": "apps/for-root/src/index.html",
@@ -13,8 +15,13 @@
         "polyfills": "apps/for-root/src/polyfills.ts",
         "tsConfig": "apps/for-root/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/for-root/src/favicon.ico", "apps/for-root/src/assets"],
-        "styles": ["apps/for-root/src/styles.scss"],
+        "assets": [
+          "apps/for-root/src/favicon.ico",
+          "apps/for-root/src/assets"
+        ],
+        "styles": [
+          "apps/for-root/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -71,12 +78,17 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/for-root/**/*.ts", "apps/for-root/**/*.html"]
+        "lintFilePatterns": [
+          "apps/for-root/**/*.ts",
+          "apps/for-root/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/for-root"],
+      "outputs": [
+        "coverage/apps/for-root"
+      ],
       "options": {
         "jestConfig": "apps/for-root/jest.config.ts",
         "passWithNoTests": true
