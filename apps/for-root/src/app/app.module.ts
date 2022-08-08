@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './_view/home/home.component';
+import { UserService } from './_services/user.service';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent, HomeComponent],
@@ -24,7 +25,7 @@ import { HomeComponent } from './_view/home/home.component';
       { initialNavigation: 'enabledBlocking' }
     ),
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
