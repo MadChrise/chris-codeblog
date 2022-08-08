@@ -1,4 +1,4 @@
-
+nx generate @nrwl/angular:app for-root
 
 # ChrisCodeblog
 
