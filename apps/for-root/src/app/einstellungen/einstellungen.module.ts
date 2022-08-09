@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { EinstellungenComponent } from './einstellungen.component';
@@ -9,6 +9,13 @@ const routes: Routes = [{ path: '', component: EinstellungenComponent }];
 @NgModule({
   declarations: [EinstellungenComponent],
   imports: [CommonModule, RouterModule.forChild(routes)],
-  providers: [UserService]
+  providers: []
 })
-export class EinstellungenModule {}
+export class EinstellungenModule {
+  forRoot(): ModuleWithProviders<EinstellungenModule> {
+    return {
+      ngModule: EinstellungenModule,
+      providers: [UserService]
+    }
+  }
+}
